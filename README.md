@@ -26,7 +26,7 @@ Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 
 ![](http://i.imgur.com/zmLXRSR.jpg)
 
-5) Put it inside `config/application.yml` file
+5) Put it inside `config/application.yml` file. If you need a template for `application.yml` file, copy from [here](https://gist.github.com/anonymous/b3c37667f62635dc7156903e479f7bfa)
 
 6) After that, put your AWS Access Key ID and Secret Access Key inside `config/application.yml` file
 
