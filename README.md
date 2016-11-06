@@ -15,7 +15,9 @@ Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 ### Installation Guide
 
 1) Clone this repo
+
 2) To test locally first, `cd` into the folder, run `bundle install`, `rake db:migrate` and `bundle exec figaro install`
+
 3) Add Incoming WebHooks as your Slack integrations
 
 ![](http://i.imgur.com/kYBzYCH.png)
@@ -25,12 +27,16 @@ Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 ![](http://i.imgur.com/zmLXRSR.jpg)
 
 5) Put it inside `config/application.yml` file
+
 6) After that, put your AWS Access Key ID and Secret Access Key inside `config/application.yml` file
+
 7) The best practice is to create a user and add SQS policy to that user
 
 ![](http://i.imgur.com/mufFLVr.jpg)
 8) [Deploy it to Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5)
+
 9) From your local machine terminal, run `heroku ps:scale web=1 worker=1` and `heroku run rake db:migrate`
+
 10) That's it. You're done!
 
 ---
