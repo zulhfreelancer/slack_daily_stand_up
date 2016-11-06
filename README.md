@@ -18,7 +18,7 @@ Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 
 2) To test locally first, `cd` into the folder, run `bundle install`, `rake db:migrate` and `bundle exec figaro install`
 
-3) Add Incoming WebHooks as your Slack integrations
+3) [Add Incoming WebHooks](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks) as your Slack integrations
 
 ![](http://i.imgur.com/kYBzYCH.png)
 
