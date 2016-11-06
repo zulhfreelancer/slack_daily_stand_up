@@ -1,4 +1,4 @@
-### Slack Daily Stand-Up
+## Slack Daily Stand-Up
 
 ![](http://i.imgur.com/hXidFGA.gif)
 
@@ -10,26 +10,30 @@ A simple Rails app to keep team daily stand-up records with Slack channel notifi
 
 Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 
+---
+
 ### Installation Guide
 
-1. Clone this repo
-2. To test locally first, `cd` into the folder, run `bundle install`, `rake db:migrate` and `bundle exec figaro install`
-3. Add Incoming WebHooks as your Slack integrations
+1) Clone this repo
+2) To test locally first, `cd` into the folder, run `bundle install`, `rake db:migrate` and `bundle exec figaro install`
+3) Add Incoming WebHooks as your Slack integrations
 
 ![](http://i.imgur.com/kYBzYCH.png)
 
-4. Copy the Webhook URL
+4) Copy the Webhook URL
 
 ![](http://i.imgur.com/zmLXRSR.jpg)
 
-5. Put it inside `config/application.yml` file
-6. After that, put your AWS Access Key ID and Secret Access Key inside `config/application.yml` file
-7. The best practice is to create a user and add SQS policy to that user
+5) Put it inside `config/application.yml` file
+6) After that, put your AWS Access Key ID and Secret Access Key inside `config/application.yml` file
+7) The best practice is to create a user and add SQS policy to that user
 
 ![](http://i.imgur.com/mufFLVr.jpg)
-8. [Deploy it to Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5)
-9. From your local machine terminal, run `heroku ps:scale web=1 worker=1` and `heroku run rake db:migrate`
-10. That's it. You're done!
+8) [Deploy it to Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5)
+9) From your local machine terminal, run `heroku ps:scale web=1 worker=1` and `heroku run rake db:migrate`
+10) That's it. You're done!
+
+---
 
 ### Important: AWS SQS Setup
 
@@ -41,11 +45,15 @@ Put `3` inside `Maximum Receives`. This means that, if Shoryuken failed to perfo
 
 ![](http://i.imgur.com/UR5PRwM.jpg)
 
+---
+
 ### Issue: Push Rejected?
 
 Easy. Just add these variables inside your Heroku App Settings > Config Variables and push again.
 
 ![](http://i.imgur.com/eoxUBwY.jpg)
+
+---
 
 ### Contribute
 
