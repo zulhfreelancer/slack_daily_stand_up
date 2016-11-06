@@ -1,6 +1,12 @@
 ### Slack Daily Stand-Up
 
-A simple Rails app to daily stand-up record with Slack channel notification. Using Shoryuken + AWS SQS for background job.
+![](http://i.imgur.com/hXidFGA.gif)
+
+[Take a closer look at the Rails app form](http://i.imgur.com/MqijkBX.png)
+
+[Take a closer look at the Slack result](http://i.imgur.com/Dk9a7B0.png)
+
+A simple Rails app to daily stand-up record with Slack channel notification. Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 
 ### Installation Guide
 
@@ -38,3 +44,9 @@ Put `3` inside `Maximum Receives`. This means that, if Shoryuken failed to perfo
 Easy. Just add these variables inside your Heroku App Settings > Config Variables and push again.
 
 ![](http://i.imgur.com/eoxUBwY.jpg)
+
+### Contribute
+
+Feel free to fork this repo and submit your pull request. :muscle:
+
+[Follow me on Twitter](http://twitter.com/zulhhandyplast)
