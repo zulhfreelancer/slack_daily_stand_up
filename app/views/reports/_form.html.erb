@@ -1,0 +1,56 @@
+<%= form_for(report) do |f| %>
+  <% if report.errors.any? %>
+    <div class="alert alert-danger">
+      <h5><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h5>
+      <ul>
+      <% report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :done_yesterday, "What you've done yesterday?" %>
+    <%= f.text_area :done_yesterday %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :doing_today, "What you're currently working on/try to finish today?" %>
+    <%= f.text_area :doing_today, value: (f.object.doing_today || "Continue:\n\nNew:"), rows: 4 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :with_group, "Are you going to do it in a small group with other developer in team? Who?" %>
+    <%= f.text_area :with_group, value: (f.object.with_group || "-") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :pending_pr, "Do you need your pending Pull Request(s) to be merged first for you to continue today tasks?" %>
+    <%= f.text_area :pending_pr, value: (f.object.pending_pr || "-") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stopping, "What are the things that stopping you?" %>
+    <%= f.text_area :stopping, value: (f.object.stopping || "-") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :not_clear, "Which parts that you not very clear to you?" %>
+    <%= f.text_area :not_clear, value: (f.object.not_clear || "-") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :need_anything, "What you need from other developer(s)?" %>
+    <%= f.text_area :need_anything, value: (f.object.need_anything || "-") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :still_stuck, "Tell us why you still stuck at it and what you're still trying so hard to solve." %>
+    <%= f.text_area :still_stuck, value: (f.object.still_stuck || "-") %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>

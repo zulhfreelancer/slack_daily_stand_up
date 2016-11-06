@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-md-12">
+		<%= link_to 'Back', reports_path, class: "btn btn-default" %>
+		<h3>Editing Daily Stand-Up Report (<%= DateTimeHelper.in_malaysia_time(@report.created_at) %>)</h3>
+
+		<%= render 'info' %>
+		<div class="alert alert-warning">
+			<b>Warning:</b> Posting update will send another post to Slack.
+		</div>
+
+		<%= render 'form', report: @report %>
+	</div>
+</div>

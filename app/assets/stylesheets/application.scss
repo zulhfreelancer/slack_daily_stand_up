@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-markdown";
+
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.md-editor > textarea,
+.md-editor > .md-preview {
+	padding: 15px !important;
+	background: #fff !important;
+}
+
+textarea {
+	height: 45px;
+}
+
+#report_done_yesterday,
+#report_doing_today {
+	height: 100px;
+}

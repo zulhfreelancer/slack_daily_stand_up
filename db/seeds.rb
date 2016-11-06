@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# create a user
+user = User.create(email: "user@example.com", password: "12341234", slack_username: "example_user")
+
+# create reports
+Report.skip_callback(:save, :after, :send_message_to_slack)
+(1..100).each do |n|
+	user.reports.create(done_yesterday: "Example", doing_today: "Example")
+	puts "1 reported created"
+end
+Report.set_callback(:save, :after, :send_message_to_slack)

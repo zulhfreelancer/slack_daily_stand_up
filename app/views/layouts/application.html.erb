@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DailyStandUp</title>
+    <title>My Daily Stand-Up</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <%= yield %>
+  	<%= render 'layouts/navbar' %>
+  	
+  	<div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <% if notice.present? %>
+            <div class="alert alert-success">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <%= notice %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+
+    	<%= yield %>
+    </div>
   </body>
 </html>

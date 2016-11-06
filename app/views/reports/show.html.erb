@@ -1,0 +1,46 @@
+<div class="row">
+  <%= link_to 'Back', reports_path, class: "btn btn-default pull-left" %>
+  <%= link_to 'Edit', edit_report_path(@report), class: "btn btn-primary pull-right" %>
+</div>
+
+<h3>My Daily Stand-Up Report for <%= DateTimeHelper.in_malaysia_time(@report.created_at) %></h3>
+
+<p>
+  <strong>A) What you've done yesterday?</strong><br/>
+  <%= simple_format @report.done_yesterday %>
+</p>
+
+<p>
+  <strong>B) What you're currently working on/try to finish today?</strong><br/>
+  <%= simple_format @report.doing_today %>
+</p>
+
+<p>
+  <strong>Are you going to do it in a small group with other developer in team? Who?</strong><br/>
+  <%= simple_format @report.with_group %>
+</p>
+
+<p>
+  <strong>Do you need your pending Pull Request(s) to be merged first for you to continue today tasks?</strong><br/>
+  <%= simple_format @report.pending_pr %>
+</p>
+
+<p>
+  <strong>C) What are the things that stopping you?</strong><br/>
+  <%= simple_format @report.stopping %>
+</p>
+
+<p>
+  <strong>Which parts that you not very clear to you?</strong><br/>
+  <%= simple_format @report.not_clear %>
+</p>
+
+<p>
+  <strong>What you need from other developer(s)?</strong><br/>
+  <%= simple_format @report.need_anything %>
+</p>
+
+<p>
+  <strong>Tell us why you still stuck at it and what you're still trying so hard to solve.</strong><br/>
+  <%= simple_format @report.still_stuck %>
+</p>

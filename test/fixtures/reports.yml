@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  done_yesterday: MyText
+  doing_today: MyText
+  with_group: MyText
+  pending_pr: 
+  stopping: 
+  not_clear: 
+  need_anything: 
+  still_stuck: 
+
+two:
+  user: 
+  done_yesterday: MyText
+  doing_today: MyText
+  with_group: MyText
+  pending_pr: 
+  stopping: 
+  not_clear: 
+  need_anything: 
+  still_stuck: 
