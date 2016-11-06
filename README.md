@@ -6,7 +6,9 @@
 
 [Take a closer look at the Slack result](http://i.imgur.com/Dk9a7B0.png)
 
-A simple Rails app to daily stand-up record with Slack channel notification. Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
+A simple Rails app to keep team daily stand-up records with Slack channel notification.
+
+Using Shoryuken + AWS SQS for background job + Slack API. Markdown supported.
 
 ### Installation Guide
 
