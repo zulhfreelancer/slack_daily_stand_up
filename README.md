@@ -32,3 +32,9 @@ Please make sure you create 2 queues inside SQS. One is the main queue and one i
 Put `3` inside `Maximum Receives`. This means that, if Shoryuken failed to perform the job for 3 times (ie: record not found), the job will be moved from main queue to dead queue.
 
 ![](http://i.imgur.com/UR5PRwM.jpg)
+
+### Issue: Push Rejected?
+
+Easy. Just add these variables inside your Heroku App Settings > Config Variables and push again.
+
+![](http://i.imgur.com/eoxUBwY.jpg)
